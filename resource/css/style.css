@@ -1,0 +1,379 @@
+    /*========== GOOGLE FONTS ==========*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    /*========== VARIABEIS CSS ==========*/
+    
+     :root {
+        --header-height: 3rem;
+        /*========== CORES  ==========*/
+        --hue-color: 250;
+        /*========== HSL  ==========*/
+        --primeira-cor: hsl(var(--hue-color), 69%, 61%);
+        --primeira-cor-second: hsl(var(--hue-color), 69%, 61%);
+        --primeira-cor-alt: hsl(var(--hue-color), 57%, 53%);
+        --primeira-cor-lighter: hsl(var(--hue-color), 92%, 85%);
+        --cor-titulo: hsl(var(--hue-color), 8%, 15%);
+        --cor-texto: hsl(var(--hue-color), 8%, 45%);
+        --cor-titulo-light: hsl(var(--hue-color), 8%, 65%);
+        --cor-input: hsl(var(--hue-color), 70%, 96%);
+        --cor-body: hsl(var(--hue-color), 60%, 99%);
+        --cor-container: #fff;
+        /*========== FONTE E TIPOGRAFIA  ==========*/
+        --body-font: 'Poppins', sans-serif;
+        --fonte-grande: 2rem;
+        --fonte-h1: 1.5rem;
+        --fonte-h2: 1.25rem;
+        --fonte-h3: 1.125rem;
+        --fonte-normal: .938rem;
+        --fonte-pequena: .813rem;
+        --fonte-menor: .75rem;
+        /*========== TAMANHO DA FONTE  ==========*/
+        --fonte-media: 500;
+        --fonte-semi-bold: 600;
+        /*========== MARGENES BOTTONS  ==========*/
+        --mb-0-25: .25rem;
+        --mb-0-5: .5rem;
+        --mb-0-75: .75rem;
+        --mb-1: 1rem;
+        --mb-1-5: 1.5rem;
+        --mb-2: 2rem;
+        --mb-2-5: 2.5rem;
+        --mb-3: 3rem;
+        /*========== Z-INDEX ==========*/
+        --z-tooltrip: 10;
+        --z-fixed: 100;
+        --z-modal: 1000;
+    }
+    /*========== TAMANHO DA FONTE PARA GRANDES TELAS  ==========*/
+    
+    @media screen and (min-width:968px) {
+         :root {
+            --fonte-grande: 3rem;
+            --fonte-h1: 2.25rem;
+            --fonte-h2: 1.5rem;
+            --fonte-h3: 1.25rem;
+            --fonte-normal: 1rem;
+            --fonte-pequena: .875rem;
+            --fonte-menor: .813rem;
+        }
+    }
+    /*========== BASE  ==========*/
+    
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        margin: 0 0 var(--header-height) 0;
+        font-family: var(--body-font);
+        font-size: var(--fonte-normal);
+        background-color: var(--cor-body);
+        color: var(--cor-texto);
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: var(--cor-titulo);
+        font-weight: var(--fonte-semi-bold);
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .section {
+        padding: 2rem 0 4rem;
+    }
+    
+    .section__title {
+        font-size: var(--fonte-h1);
+    }
+    
+    .section__subtitle {
+        display: block;
+        font-size: var(--fonte-pequena);
+        margin-bottom: var(--mb-3);
+    }
+    
+    .section__title,
+    .section__subtitle {
+        text-align: center;
+    }
+    /*========== LAYOUT  ==========*/
+    
+    .container {
+        max-width: 768px;
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+    
+    .grid {
+        display: grid;
+        gap: 1.5rem;
+    }
+    
+    .header {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: var(--cor-body);
+    }
+    /*========== NAV ==========*/
+    
+    .nav {
+        max-width: 968px;
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav__logo,
+    .nav__toggle {
+        color: var(--cor-titulo);
+        font-weight: var(--fonte-media);
+    }
+    
+    .nav__logo:hover {
+        color: var(--primeira-cor);
+    }
+    
+    .nav__toggle {
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    
+    .nav__toggle:hover {
+        color: var(--primeira-cor);
+    }
+    
+    @media screen and (max-width: 767px) {
+        .nav__menu {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--cor-body);
+            padding: 2rem 1.5rem 4rem;
+            box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+            border-radius: 1.5rem 1.5rem 0 0;
+            transition: .3s;
+        }
+    }
+    
+    .nav__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .nav__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--fonte-pequena);
+        color: var(--cor-titulo);
+        font-weight: var(--fonte-media);
+    }
+    
+    .nav__link:hover {
+        color: var(--primeira-cor);
+    }
+    
+    .nav__icon {
+        font-size: 1.2rem;
+    }
+    
+    .nav__close {
+        position: absolute;
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--primeira-cor);
+    }
+    
+    .nav__close:hover {
+        color: var(--primeira-cor-alt);
+    }
+    
+    .show-menu {
+        bottom: 0;
+    }
+    /*========== HOME ==========*/
+    
+    .home__container {
+        gap: 1rem;
+    }
+    
+    .home__content {
+        grid-template-columns: .5fr 3fr;
+        padding-top: 3.5rem;
+        align-items: center;
+    }
+    
+    .home__social {
+        display: grid;
+        grid-template-columns: max-content;
+        row-gap: 1rem;
+    }
+    
+    .home__social-icon {
+        font-size: 1.25rem;
+        color: var(--primeira-cor);
+    }
+    
+    .home__social-icon:hover {
+        color: var(--primeira-cor-alt);
+    }
+    
+    .home__blob {
+        width: 200px;
+        fill: var(--primeira-cor);
+    }
+    
+    .home__blob-img {
+        width: 100px;
+    }
+    
+    .home__data {
+        grid-column: 1/3;
+    }
+    
+    .home__title {
+        font-size: var(--fonte-grande);
+    }
+    
+    .home__subtitle {
+        font-size: var(--fonte-h3);
+        color: var(--cor-texto);
+        font-weight: var(--fonte-media);
+        margin-bottom: var(--mb-0-75);
+    }
+    
+    .home__description {
+        margin-bottom: var(--mb-2);
+    }
+    
+    .home__scroll {
+        display: none;
+    }
+    
+    .home__scroll-button {
+        color: var(--primeira-cor);
+        transition: .3s;
+    }
+    
+    .home__scroll-button:hover {
+        transform: translateY(0.25rem);
+    }
+    
+    .home__scroll-mouse {
+        font-size: 2rem;
+    }
+    
+    .home__scroll-name {
+        font-size: var(--fonte-pequena);
+        color: var(--cor-titulo);
+        font-weight: var(--fonte-media);
+        margin-right: var(--mb-0-25);
+    }
+    
+    .home__scroll-arrow {
+        font-size: 1.25rem;
+    }
+    /*========== BUTTON ==========*/
+    
+    .button {
+        display: inline-block;
+        background-color: var(--primeira-cor);
+        color: #fff;
+        padding: 1rem;
+        border-radius: .5rem;
+        font-weight: var(--fonte-media);
+    }
+    
+    .button:hover {
+        background-color: var(--primeira-cor-alt);
+    }
+    
+    .button__icon {
+        font-size: 1.25rem;
+        margin-left: var(--mb-0-5);
+        transition: .3s;
+    }
+    
+    .button--flex {
+        display: inline-flex;
+        align-items: center;
+    }
+    /*========== SOBRE ==========*/
+    
+    .sobre__img {
+        width: 200px;
+        border-radius: .5rem;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .sobre__description {
+        text-align: center;
+        margin-bottom: var(--mb-2-5);
+    }
+    
+    .sobre__info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: var(--mb-2-5);
+    }
+    
+    .sobre__info-title {
+        font-size: var(--fonte-h2);
+        font-weight: var(--fonte-semi-bold);
+        color: var(--cor-titulo);
+    }
+    
+    .sobre__info-name {
+        font-size: var(--fonte-menor);
+    }
+    
+    .sobre__info-title,
+    .sobre__info-name {
+        display: block;
+        text-align: center;
+    }
+    
+    .sobre__buttons {
+        display: flex;
+        justify-content: center;
+    }
+    /*========== SKILLS ==========*/
+    
+    .skills__container {
+        row-gap: 0;
+    }
+    
+    .skills__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--mb-2-5);
+        cursor: pointer;
+    }
