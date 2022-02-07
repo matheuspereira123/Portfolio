@@ -252,6 +252,7 @@
     
     .home__blob-img {
         width: 100px;
+        /* height: 150px; */
     }
     
     .home__data {
@@ -343,7 +344,7 @@
     /*========== SOBRE ==========*/
     
     .sobre__img {
-        width: 200px;
+        width: 230px;
         border-radius: .5rem;
         justify-self: center;
         align-self: center;
