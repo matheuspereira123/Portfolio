@@ -4,6 +4,9 @@
     /*========== VARIABEIS CSS ==========*/
     
      :root {
+        --first-hue: 250;
+        --sat: 66%;
+        --lig: 75%;
         --header-height: 3rem;
         /*========== CORES  ==========*/
         --hue-color: 250;
@@ -96,6 +99,22 @@
     img {
         max-width: 100%;
         height: auto;
+        display: block;
+    }
+    
+    .home__img {
+        width: 160px;
+    }
+    
+    .home__handle {
+        justify-self: center;
+        width: 180px;
+        height: 255px;
+        background: linear-gradient(180deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), hsla(var(--first-hue), var(--sat), var(--lig), .6));
+        border-radius: 10rem 10rem 1rem 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
     }
     
     .section {
@@ -249,11 +268,11 @@
         width: 200px;
         fill: var(--primeira-cor);
     }
-    
-    .home__blob-img {
+    /* .home__blob-img {
         width: 100px;
-        /* height: 150px; */
+        height: 150px;
     }
+     */
     
     .home__data {
         grid-column: 1/3;
