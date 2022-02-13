@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de sections</title>
+    <!---------------- SWIPER ---------------->
+    <link rel="stylesheet" href="resource/css/swiper-bundle.min.css">
     <!---------------- UNICONS ---------------->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!---------------- CSS ---------------->
     <link rel="stylesheet" href="resource/css/style.css">
-    <!---------------- SWIPER ---------------->
-    <link rel="stylesheet" href="resource/css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -19,28 +19,58 @@
     <section class="portfolio section" id="portfolio">
         <h2 class="section__title">Portfolio</h2>
         <span class="section__subtitle">Projetos mais recentes</span>
-
-
-        <div class="portfolio__container container">
-            <div>
+        <!-- Swiper -->
+        <div class="portfolio__container container swiper mySwiper">
+            <div class="swiper-wrapper">
                 <!---------------- PORTFOLIO 1 ---------------->
-                <div class="portfolio__content grid">
+                <div class="portfolio__content grid swiper-slide">
                     <img src="resource/img/Portfolio 1 tela inicial.jpeg" alt="" class="portfolio__img">
 
                     <div class="porfolio__data">
                         <h3 class="portfolio__title">Software para requisição de Orçamentos</h3>
+                        <p class="portfolio__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat veniam qui odio dignissimos sapiente porro odit cumque mollitia voluptatem! Placeat, impedit. Ipsum sequi consequuntur beatae dicta impedit deleniti fugit molestiae.</p>
+                        <a href="#" class="button button--flex button--smal portfolio__button">
+                        Demo
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                    </div>
+                </div>
+                <!---------------- PORTFOLIO 2 ---------------->
+                <div class="portfolio__content grid swiper-slide">
+                    <img src="resource/img/portfolio-2-tela-inicial.png" alt="" class="portfolio__img">
+
+                    <div class="porfolio__data">
+                        <h3 class="portfolio__title">Sistema E-commerce</h3>
+                        <p class="portfolio__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique veritatis adipisci at beatae.</p>
+                        <a href="#" class="button button--flex button--smal portfolio__button">
+                        Demo
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
                     </div>
                 </div>
             </div>
+
+            <!---------------- SLIDE BUTTON ---------------->
+            <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+            </div>
+
+            <!---------------- ADD PAGINATION ---------------->
+            <div class="swiper-pagination"></div>
         </div>
+
     </section>
 
 
-
+    <!---------------- SWIPER ---------------->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!---------------- MAIN JS ---------------->
     <script src="resource/js/main.js"></script>
-    <!---------------- SWIPER ---------------->
-    <script src="resource/js/swiper-bundle.min.js"></script>
+
+    <!-- <script src="resource/js/swiper-bundle.min.js"></script> -->
 </body>
 
 </html>
