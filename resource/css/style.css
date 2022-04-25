@@ -188,6 +188,13 @@
         z-index: var(--z-fixed);
         background-color: var(--cor-body);
     }
+    
+    button {
+        text-decoration: none;
+        border: none;
+        font-family: var(--body-font);
+        font-size: var(--fonte-media);
+    }
     /*========== NAV ==========*/
     
     .nav {

@@ -97,7 +97,7 @@
                         </h1>
                         <h3 class="home__subtitle">Front-end developer</h3>
                         <p class="home__description"> Iniciante no mercado de trabalho, porém com disposição para absorver e passar conhecimento.</p>
-                        <a href="#contact" class="button">
+                        <a href="#contate-me" class="button">
                             Contate-me <i class="uil uil-message button-icon"></i>
                         </a>
                     </div>
@@ -684,31 +684,33 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form action="https://formsubmit.co/e5e3fc1184afd84667782be8aca24c51" method="POST" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
-                            <label for="" class="contact__label">Nome</label>
-                            <input type="text" class="contact__input">
+                            <label for="name" class="contact__label">Nome</label>
+                            <input type="text" name="name" id="name" class="contact__input" required>
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
+                            <label for="email" class="contact__label">Email</label>
+                            <input type="email" name="email" id="email" class="contact__input" required>
                         </div>
                     </div>
                     <div class="contact__content">
-                        <label for="" class="contact__label">Projeto</label>
-                        <input type="text" class="contact__input">
+                        <label for="projeto" class="contact__label">Projeto</label>
+                        <input type="text" name="projeto" id="projeto" class="contact__input" required>
                     </div>
                     <div class="contact__content">
-                        <label for="" class="contact__label">Mensagem</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <label for="message" class="contact__label">Mensagem</label>
+                        <textarea id="message" name="message" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
 
                     <div>
-                        <a href="#" class="button button--flex">
-                            Enviar mensagem 
+                        <button type="submit" class="button button--flex">
+                            Enviar mensagem
                             <i class="uil uil-message button__icon"></i>
-                        </a>
+                        </button>
                     </div>
                 </form>
             </div>
