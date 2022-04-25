@@ -1,0 +1,112 @@
+    /*========== GOOGLE FONTS ==========*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+     :root {
+        --first-hue: 250;
+        --sat: 66%;
+        --lig: 75%;
+        --header-height: 3rem;
+        /*========== CORES  ==========*/
+        --hue-color: 250;
+        /*========== HSL  ==========*/
+        --primeira-cor: hsl(var(--hue-color), 69%, 61%);
+        --primeira-cor-second: hsl(var(--hue-color), 30%, 8%);
+        --cor-titulo: hsl(var(--hue-color), 8%, 95%);
+        --cor-texto: hsl(var(--hue-color), 8%, 75%);
+        --cor-input: hsl(var(--hue-color), 29%, 16%);
+        --cor-body: hsl(var(--hue-color), 28%, 12%);
+        --cor-container: hsl(var(--hue-color), 29%, 16%);
+        --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+        --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+        /*========== FONTE E TIPOGRAFIA  ==========*/
+        --body-font: 'Poppins', sans-serif;
+        --fonte-grande: 2rem;
+        --fonte-h1: 1.5rem;
+        --fonte-h2: 1.25rem;
+        --fonte-h3: 1.125rem;
+        --fonte-normal: .938rem;
+        --fonte-pequena: .813rem;
+        --fonte-menor: .75rem;
+        /*========== TAMANHO DA FONTE  ==========*/
+        --fonte-media: 500;
+        --fonte-semi-bold: 600;
+        /*========== MARGENES BOTTONS  ==========*/
+        --mb-0-25: .25rem;
+        --mb-0-5: .5rem;
+        --mb-0-75: .75rem;
+        --mb-1: 1rem;
+        --mb-1-5: 1.5rem;
+        --mb-2: 2rem;
+        --mb-2-5: 2.5rem;
+        --mb-3: 3rem;
+        /*========== Z-INDEX ==========*/
+        --z-tooltrip: 10;
+        --z-fixed: 100;
+        --z-modal: 1000;
+    }
+    
+    h1,
+    h2 {
+        font-weight: var(--fonte-semi-bold);
+    }
+    
+    h1 {
+        color: var(--primeira-cor);
+        font-size: var(--fonte-grande);
+    }
+    
+    h2 {
+        color: var(--cor-titulo);
+    }
+    
+    body {
+        font-family: var(--body-font);
+        padding: 0;
+        background-color: var(--cor-body);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .button {
+        display: inline-block;
+        background-color: var(--primeira-cor);
+        color: #fff;
+        padding: 1rem;
+        border-radius: .5rem;
+        font-weight: var(--fonte-media);
+    }
+    
+    .home__handle {
+        margin: auto;
+        justify-self: center;
+        width: 360px;
+        height: 370px;
+        background: linear-gradient(180deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), hsla(var(--first-hue), var(--sat), var(--lig), .8));
+        border-radius: 10rem 10rem 1rem 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .home__img {
+        width: 360px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container {
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+    }
