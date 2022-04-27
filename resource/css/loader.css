@@ -1,0 +1,26 @@
+@keyframes suma {
+    to {
+        opacity: 0;
+    }
+}
+
+.loader {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader>img {
+    width: 60%;
+}
+
+.desaparecer {
+    animation: suma 3s ease-out forwards;
+}
