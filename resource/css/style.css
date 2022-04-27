@@ -194,6 +194,7 @@
         border: none;
         font-family: var(--body-font);
         font-size: var(--fonte-media);
+        cursor: pointer;
     }
     /*========== NAV ==========*/
     
